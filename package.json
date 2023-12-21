@@ -1,17 +1,35 @@
 {
   "name": "nwjssimple",
   "version": "1.0.0",
-  "description": "As Always, a simples implementation test of a locally executable front end with node web kit!",
+  "description": "A simple implementation test of a locally executable front end with NW.js!",
   "main": "main.js",
   "scripts": {
     "start": "nw",
     "stop": "taskkill /IM nw.exe /F",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dist": "build --tasks win-x86,win-x64,linux-x86,linux-x64,mac-x64 --mirror https://dl.nwjs.io/ ."
   },
+  "bin": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "nw": "^0.82.0"
+  },
+  "build": {
+    "nwVersion": "0.14.7",
+    "platforms": [
+      "win64",
+      "osx64",
+      "linux64"
+    ],
+    "appName": "nwjssimple",
+    "buildDir": "./build",
+    "files": [
+      "./**/*"
+    ]
+  },
+  "devDependencies": {
+    "nwjs-builder-phoenix": "^1.15.0"
   }
 }
