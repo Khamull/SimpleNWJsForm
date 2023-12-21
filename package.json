@@ -1,0 +1,17 @@
+{
+  "name": "nwjssimple",
+  "version": "1.0.0",
+  "description": "As Always, a simples implementation test of a locally executable front end with node web kit!",
+  "main": "main.js",
+  "scripts": {
+    "start": "nw",
+    "stop": "taskkill /IM nw.exe /F",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nw": "^0.82.0"
+  }
+}
